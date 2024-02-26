@@ -5,21 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- css -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Préchargement des fichiers CSS critiques -->
+    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
 
-    <!-- icons -->
-    <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Préchargement des polices de caractères de manière asynchrone -->
+    <link rel="preload" as="font" href="/fonts/poppins-regular-webfont.woff2" type="font/woff2" crossorigin="anonymous">
 
-    <!-- mapbox api -->
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet">
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
+    <!-- Mapbox CSS asynchrone -->
+    <link rel="preload" href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet"></noscript>
 
-    <!-- google fonts -->
-    <link rel="preload" as ="font" href="/fonts/poppins-regular-webfont.woff2" type="font/woff2" crossorigin="anonymous">
-    
+    <!-- Icons -->
+    <link rel="preload" href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'></noscript>
+
     <title>Tethics Excellence Academy</title>
 </head>
 <body>
@@ -370,20 +370,33 @@
   <!-- js -->
 
 
-  <!-- mapbox api integration -->
+  <!-- custom js -->
+  
+  <!-- JS en bas pour éviter de bloquer le rendu -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js" defer></script>
+  <script src="js/main.js" defer></script>
 
-  <script>
-      mapboxgl.accessToken = 'pk.eyJ1Ijoic2FoaWwwNiIsImEiOiJja3NlYXAzcGUweXZzMm9vZDF6a213a3YwIn0.2TqRpF9Ot8N3TcY5vKY0ag';
-      const map = new mapboxgl.Map({
-          container: 'map',
-          style: 'mapbox://styles/mapbox/streets-v11', 
-          center: [77.4126, 23.2599], 
-          zoom: 12
-      });
+  <!-- Intégration d'ionicons avec async -->
+  <script async type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script async nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-      const marker1 = new mapboxgl.Marker()
-      .setLngLat([77.4126, 23.2599])
-      .addTo(map);
+    <!-- mapbox api integration -->
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic2FoaWwwNiIsImEiOiJja3NlYXAzcGUweXZzMm9vZDF6a213a3YwIn0.2TqRpF9Ot8N3TcY5vKY0ag';
+    const map = new mapboxgl.Map({
+        container: 'map', // ID de l'élément HTML où la carte doit apparaître
+        style: 'mapbox://styles/mapbox/streets-v11', 
+        center: [77.4126, 23.2599], // Coordonnées [lng, lat] du centre de la carte
+        zoom: 12 // Niveau de zoom initial
+    });
+
+    // Ajouter un marqueur à la carte
+    new mapboxgl.Marker()
+        .setLngLat([77.4126, 23.2599])
+        .addTo(map);
+});
   </script>
 
 
@@ -407,11 +420,6 @@
         document.documentElement.scrollTop = 0;
       }
   </script>
-
-
-  <!-- custom js -->
-  
-  <script src="js/main.js"></script>
 
 </body>
 </html>
