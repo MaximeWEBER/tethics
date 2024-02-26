@@ -1,7 +1,15 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: Montserrat
+	font-family: Poppins
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/poppins-regular-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+	font-display: swap
 }
 
 #map {
@@ -119,7 +127,7 @@ i {
 	font-size: 1.2rem;
 	font-weight: 400;
 	transition: .2s ease-in;
-	font-family: Montserrat
+	font-family: Poppins
 }
 
 .nav-links a:hover {
@@ -194,7 +202,7 @@ i {
 }
 
 .char-btn {
-	font-family: Montserrat;
+	font-family: Poppins;
 	color: var(--dark);
 	font-size: 20px;
 	font-weight: 500;
@@ -499,7 +507,7 @@ i {
 	flex-direction: column;
 	align-items: center;
 	gap: 6rem;
-	font-family: Montserrat;
+	font-family: Poppins;
 	margin-top: 100px;
 	margin-bottom: 100px
 }
