@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- css optimisé -->
+  <link rel="stylesheet" href="css/login.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/login.css"></noscript>
 
-    <!-- css -->
-    <link rel="stylesheet" href="css/login.css">
+  <!-- icons chargement asynchrone -->
+  <link href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" async></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" async></script>
 
-    <!-- icons -->
-    <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- mapbox api chargement asynchrone -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js" async></script>
 
-    <!-- mapbox api -->
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet">
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
-
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <title>Tethics | Login</title>
+  <!-- fonts préchargées -->
+  <link rel="preload" as="font" href="/fonts/poppins-regular-webfont.woff2" type="font/woff2" crossorigin="anonymous">
+  
+  <title>Tethics | Login</title>
 </head>
 <body>
 
@@ -70,7 +69,7 @@
 
     <!-- js -->
 
-    <script src="/js/main.js"></script>
+    <script src="/js/main.js" defer></script>
 
   </body>
 </html>
