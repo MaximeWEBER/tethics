@@ -5,35 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- css -->
+    
 
-    <link rel="stylesheet" href="css/dashboard.css">
+    <!-- Préchargement des fichiers CSS critiques -->
+
+    <link rel="preload" as="image" href="../assets/webp/webp1280/breakpoint5-blur_1280x853.webp">
+    <link rel="preload" href="css/dashboard.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/dashboard.css"></noscript>
 
     <!-- icons -->
 
-    <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="preload" href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'></noscript>
+    <noscript><link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css'></noscript>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" async></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" async></script>
 
     <!-- mapbox api -->
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.css" rel="stylesheet">
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.js"></script>
-    <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+    <link rel="preload" href="https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.js" async></script>
+    <script src="https://unpkg.com/@turf/turf@6/turf.min.js" async></script>
 
     <!-- graph -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="js/main.js" defer></script>
     <script type="text/javascript">
         google.charts.load('current', {
             packages: ['corechart']
         });
     </script>
 
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <!-- Préchargement des polices -->
+   <link rel="preload" as="font" href="../fonts/poppins-regular-webfont.woff2" type="font/woff2" crossorigin="anonymous">
+
     <title>Tethics | Dashboard</title>
 </head>
 <body>
@@ -176,6 +182,7 @@
   <!-- mapbox api integration -->
 
   <script>
+    window.addEventListener('load', function() {
     mapboxgl.accessToken = 'pk.eyJ1Ijoic2FoaWwwNiIsImEiOiJja3NlYXAzcGUweXZzMm9vZDF6a213a3YwIn0.2TqRpF9Ot8N3TcY5vKY0ag';
     const map = new mapboxgl.Map({
         container: 'map',
@@ -196,6 +203,7 @@
     const marker1 = new mapboxgl.Marker()
     .setLngLat([77.1888, 28.7095])
     .addTo(map);
+  });
   </script>
 
 
@@ -224,7 +232,6 @@
   
   <!-- custom js -->
 
-  <script src="js/main.js"></script>
         
 </body>
 </html>

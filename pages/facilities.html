@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- css -->
-    <link rel="stylesheet" href="css/facilities.css">
+   <!-- Préchargement du fichier CSS critique -->
+   <link rel="preload" as="image" href="../assets/webp/webp1280/breakpoint-blur-dark_1280x853.webp">
+   <link rel="preload" href="css/facilities.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+   <noscript><link rel="stylesheet" href="css/facilities.css"></noscript>
 
-    <!-- icons -->
-    <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+   <!-- Préchargement des icônes -->
+   <link rel="preload" href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' as="style" onload="this.onload=null;this.rel='stylesheet'">
+   <noscript><link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'></noscript>
 
-    <!-- mapbox api -->
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet">
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
+   <!-- Préchargement de la CSS Mapbox -->
+   <link rel="preload" href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+   <noscript><link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet"></noscript>
 
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <title>Tethics | Facilities</title>
+   <!-- Préchargement des polices -->
+   <link rel="preload" as="font" href="../fonts/poppins-regular-webfont.woff2" type="font/woff2" crossorigin="anonymous">
+
+   <!--lazy-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async=""></script>
+
+   <title>Tethics | Facilities</title>
 </head>
 <body>
 
@@ -68,7 +70,19 @@
         <div class="features">
         <div class="flex">
            <div class="flex-image">
-              <img src="/assets/breakpoint7.jpg" alt="">
+            <picture>
+               <source 
+                  srcset="../assets/avif/avif1280/breakpoint7_1280x853.avif 1280w,
+                  ../assets/avif/avif640/breakpoint7_640x427.avif 640w,
+                  ../assets/avif/avif320/breakpoint7_320x213.avif 320w" 
+                  type="image/avif">
+               <source 
+                  srcset="../assets/webp/webp1280/breakpoint7_1280x853.webp 1280w,
+                  ../assets/webp/webp640/breakpoint7_640x427.webp 640w,
+                  ../assets/webp/webp320/breakpoint7_320x213.webp 320w" 
+                  type="image/webp">
+               <img class="lazyload" src="../assets/breakpoint7.jpg" width="650px" height="auto" alt="" loading="lazy">
+            </picture>
            </div>
            <div class="flex-info">
               <h2>Sports</h2>
@@ -89,12 +103,36 @@
               </p>
            </div>
            <div class="flex-image">
-              <img src="/assets/breakpoint2.jpg" alt="">
+            <picture>
+               <source
+                  srcset="../assets/avif/avif1280/breakpoint2_1280x853.avif 1280w,
+                  ../assets/avif/avif640/breakpoint2_640x427.avif 640w,
+                  ../assets/avif/avif320/breakpoint2_320x213.avif 320w" 
+                  type="image/avif">
+               <source
+                  srcset="../assets/webp/webp1280/breakpoint2_1280x853.webp 1280w,
+                  ../assets/webp/webp640/breakpoint2_640x427.webp 640w,
+                  ../assets/webp/webp320/breakpoint2_320x213.webp 320w" 
+                  type="image/webp">
+               <img class="lazyload" src="../assets/breakpoint2.jpg" width="650px" height="auto" alt="" alt="" loading="lazy">
+            </picture>
            </div>
         </div>
         <div class="flex">
            <div class="flex-image">
-              <img src="/assets/breakpoint8.jpg" alt="">
+            <picture>
+               <source 
+                  srcset="../assets/avif/avif1280/breakpoint8_1280x853.avif 1280w,
+                  ../assets/avif/avif640/breakpoint8_640x427.avif 640w,
+                  ../assets/avif/avif320/breakpoint8_320x213.avif 320w" 
+                  type="image/avif">
+               <source 
+                  srcset="../assets/webp/webp1280/breakpoint8_1280x853.webp 1280w,
+                  ../assets/webp/webp640/breakpoint8_640x427.webp 640w,
+                  ../assets/webp/webp320/breakpoint8_320x213.webp 320w" 
+                  type="image/webp">
+               <img class="lazyload" src="../assets/breakpoint8.jpg" width="650px" height="auto" alt="" loading="lazy">
+            </picture>
            </div>
            <div class="flex-info">
               <h2>24x7 Library</h2>
@@ -109,16 +147,36 @@
               <p>Tethics Academy also has a hostel in its premisis. The hostels have state-of-the-art washrooms (toilet and bathing cells). Cleanliness is maintained by the staff on duty. Each hostel room provides an amiable atmosphere and pollution-free environment, conducive to the mental, physical and spiritual development of the students and helps them become self-reliant.</p>
            </div>
            <div class="flex-image">
-              <img src="/assets/breakpoint9.jpg" alt="">
+            <picture>
+               <source 
+                  srcset="../assets/avif/avif1280/breakpoint9_1280x853.avif 1280w,
+                  ../assets/avif/avif640/breakpoint9_640x427.avif 640w,
+                  ../assets/avif/avif320/breakpoint9_320x213.avif 320w" 
+                  type="image/avif">
+               <source 
+                  srcset="../assets/webp/webp1280/breakpoint9_1280x853.webp 1280w,
+                  ../assets/webp/webp640/breakpoint9_640x427.webp 640w,
+                  ../assets/webp/webp320/breakpoint9_320x213.webp 320w" 
+                  type="image/webp">
+               <img class="lazyload" src="../assets/breakpoint9.jpg" width="650px" height="auto" alt="" loading="lazy">
+            </picture>
            </div>
         </div>
         <div class="flex">
            <div class="flex-image">
-               <picture>
-                     <source srcset="/assets/breakpoint1.webp" type="image/webp">
-                     <source srcset="/assets/breakpoint1.avif" type="image/avif">
-                     <img src="/assets/breakpoint1.jpg" alt="">
-               </picture>
+            <picture>
+               <source 
+                  srcset="../assets/avif/avif1280/breakpoint1_1280x853.avif 1280w,
+                  ../assets/avif/avif640/breakpoint1_640x427.avif 640w,
+                  ../assets/avif/avif320/breakpoint1_320x213.avif 320w" 
+                  type="image/avif">
+               <source 
+                  srcset="../assets/webp/webp1280/breakpoint1_1280x853.webp 1280w,
+                  ../assets/webp/webp640/breakpoint1_640x427.webp 640w,
+                  ../assets/webp/webp320/breakpoint1_320x213.webp 320w" 
+                  type="image/webp">
+               <img class="lazyload" src="../assets/breakpoint1.jpg" width="650px" height="auto" alt="" loading="lazy">
+            </picture>
            </div>
            <div class="flex-info">
               <h2>Curriculum</h2>
@@ -150,31 +208,37 @@
 
     <!-- js -->
 
-
-    <!-- scroll to top js -->
-
-    <script>
-        var mybutton = document.getElementById("myBtn");
-        window.onscroll = function() {scrollFunction()};
-        
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-            } else {
-            mybutton.style.display = "none";
-            }
-        }
-        
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    </script>
-
-
     <!-- custom js -->
-    
-    <script src="/js/main.js"></script>
+
+    <!-- Chargement asynchrone des scripts JS -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js" async></script>
+    <script src="js/main.js" async></script>
+
+    <!-- Chargement asynchrone des icônes Ionicons -->
+    <script async type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script async nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+        <!-- scroll to top js -->
+
+    <!-- Scripts personnalisés et gestion du bouton de retour en haut -->
+    <script>
+      var mybutton = document.getElementById("myBtn");
+      window.onscroll = function() {scrollFunction()};
+   
+      function scrollFunction() {
+         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+         } else {
+            mybutton.style.display = "none";
+         }
+      }
+      
+      function topFunction() {
+         document.body.scrollTop = 0;
+         document.documentElement.scrollTop = 0;
+      }
+  
+  </script>
         
 </body>
 </html>
