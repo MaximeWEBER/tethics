@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: 'Poppins';
-    src: url('/fonts/poppins-regular-webfont.woff2') format('woff2');
+    src: url('/Tethics/fonts/poppins-regular-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 	font-display: swap
@@ -345,7 +345,7 @@ i {
 
 .vision {
 	background-color: #d2d2d2;
-	background-image: url(/assets/bg-pattern.svg);
+	background-image: url(/Tethics/assets/bg-pattern.svg);
 	background-position: center;
 	background-size: cover;
 	text-align: center;
@@ -407,7 +407,7 @@ i {
 }
 
 .bottom {
-	background-image: url(/assets/bg-pattern.svg);
+	background-image: url(/Tethics/assets/bg-pattern.svg);
 	background-color: #4b4a4a;
 	background-position: center;
 	background-size: cover
